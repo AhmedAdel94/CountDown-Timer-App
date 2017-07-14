@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CountDown_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 Seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxY-Ab-YZN">
+                                <rect key="frame" x="140" y="153" width="134.33333333333331" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="0.0" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="MGk-Nk-asI">
+                                <rect key="frame" x="58" y="223" width="298" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="GRJ-V5-MS6"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWI-33-gRD">
+                                <rect key="frame" x="259" y="309" width="95" height="53"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="JBa-LL-MUb"/>
+                                </constraints>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HUG-l3-0Jd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZd-na-ggG">
+                                <rect key="frame" x="60" y="309" width="93" height="53"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="AYe-jC-nYP"/>
+                                    <constraint firstAttribute="width" constant="93" id="kcE-hI-7Hv"/>
+                                </constraints>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MMg-d5-C3V"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KWI-33-gRD" firstAttribute="firstBaseline" secondItem="UZd-na-ggG" secondAttribute="baseline" id="30B-ja-MVK"/>
+                            <constraint firstItem="KWI-33-gRD" firstAttribute="baseline" secondItem="UZd-na-ggG" secondAttribute="firstBaseline" id="56z-37-OlB"/>
+                            <constraint firstItem="MGk-Nk-asI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="223" id="9L3-OF-AoJ"/>
+                            <constraint firstItem="KWI-33-gRD" firstAttribute="top" secondItem="MGk-Nk-asI" secondAttribute="bottom" constant="56" id="AVF-oZ-Eph"/>
+                            <constraint firstItem="KWI-33-gRD" firstAttribute="top" secondItem="UZd-na-ggG" secondAttribute="top" id="U7A-C5-KBI"/>
+                            <constraint firstItem="KWI-33-gRD" firstAttribute="trailing" secondItem="MGk-Nk-asI" secondAttribute="trailing" id="eej-q9-Hv7"/>
+                            <constraint firstItem="MGk-Nk-asI" firstAttribute="leading" secondItem="UZd-na-ggG" secondAttribute="leading" id="g6q-FQ-6nZ"/>
+                            <constraint firstItem="MGk-Nk-asI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gX7-Ey-uG2"/>
+                            <constraint firstItem="MGk-Nk-asI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="jdo-Jw-ebA"/>
+                            <constraint firstItem="MGk-Nk-asI" firstAttribute="centerX" secondItem="TxY-Ab-YZN" secondAttribute="centerX" id="lIb-k1-Ouc"/>
+                            <constraint firstItem="MGk-Nk-asI" firstAttribute="top" secondItem="TxY-Ab-YZN" secondAttribute="bottom" constant="40" id="uV9-2s-Coh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="startButton" destination="UZd-na-ggG" id="E7d-Iu-EIa"/>
+                        <outlet property="stopButton" destination="KWI-33-gRD" id="gfy-ss-7Ui"/>
+                        <outlet property="timeLabel" destination="TxY-Ab-YZN" id="iC3-Cx-jn1"/>
+                        <outlet property="timeSlider" destination="MGk-Nk-asI" id="Ahp-dI-D92"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.58695652173915"/>
+        </scene>
+    </scenes>
+</document>
